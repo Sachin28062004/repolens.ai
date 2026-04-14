@@ -1,0 +1,76 @@
+spring:
+  application:
+    name: codelens-ai-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/codelensai}
+    username: ${SPRING_DATASOURCE_USERNAME:codelens}
+    password: ${SPRING_DATASOURCE_PASSWORD:codelens}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+  flyway:
+    enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${GITHUB_CLIENT_ID:}
+            client-secret: ${GITHUB_CLIENT_SECRET:}
+            scope:
+              - read:user
+              - user:email
+        provider:
+          github:
+            user-name-attribute: id
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 20MB
+
+server:
+  port: ${SERVER_PORT:8080}
+
+logging:
+  level:
+    root: INFO
+    com.codelensai: DEBUG
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-to-a-very-long-random-secret-change-me}
+    issuer: ${JWT_ISSUER:codelens-ai}
+    audience: ${JWT_AUDIENCE:codelens-ai-api}
+    expiration: ${JWT_EXPIRATION:PT24H}
+  groq:
+    api-key: ${GROQ_API_KEY:}
+    base-url: ${GROQ_BASE_URL:https://api.groq.com/openai/v1}
+    model: ${GROQ_MODEL:moonshotai/kimi-k2-instruct-0905}
+    timeout: ${GROQ_TIMEOUT:PT90S}
+  github:
+    api-base-url: ${GITHUB_API_BASE_URL:https://api.github.com}
+    token: ${GITHUB_API_TOKEN:}
+    timeout: ${GITHUB_API_TIMEOUT:PT30S}
+  upload:
+    max-files: ${UPLOAD_MAX_FILES:10}
+    max-zip-bytes: ${UPLOAD_MAX_ZIP_BYTES:15728640}
+  security:
+    oauth2-success-redirect-uri: ${OAUTH2_SUCCESS_REDIRECT_URI:http://localhost:3000/oauth2/success}
+    permitted-origins:
+      - ${FRONTEND_ORIGIN:http://localhost:3000}
+  cors:
+    allowed-origins:
+      - ${FRONTEND_ORIGIN:http://localhost:3000}
+    allowed-methods:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+      - OPTIONS
