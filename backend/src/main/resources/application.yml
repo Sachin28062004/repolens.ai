@@ -1,10 +1,10 @@
 spring:
   application:
-    name: codelens-ai-backend
+    name: repolens-ai-backend
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/codelensai}
-    username: ${SPRING_DATASOURCE_USERNAME:codelens}
-    password: ${SPRING_DATASOURCE_PASSWORD:codelens}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/repolensai}
+    username: ${SPRING_DATASOURCE_USERNAME:repolens}
+    password: ${SPRING_DATASOURCE_PASSWORD:repolens}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -40,13 +40,13 @@ server:
 logging:
   level:
     root: INFO
-    com.codelensai: DEBUG
+    com.repolensai: DEBUG
 
 app:
   jwt:
     secret: ${JWT_SECRET:change-me-to-a-very-long-random-secret-change-me}
-    issuer: ${JWT_ISSUER:codelens-ai}
-    audience: ${JWT_AUDIENCE:codelens-ai-api}
+    issuer: ${JWT_ISSUER:repolens-ai}
+    audience: ${JWT_AUDIENCE:repolens-ai-api}
     expiration: ${JWT_EXPIRATION:PT24H}
   groq:
     api-key: ${GROQ_API_KEY:}

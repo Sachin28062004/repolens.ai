@@ -1,4 +1,4 @@
-package com.codelensai.exception;
+package com.repolensai.exception;
 
 import org.springframework.http.HttpStatus;
 

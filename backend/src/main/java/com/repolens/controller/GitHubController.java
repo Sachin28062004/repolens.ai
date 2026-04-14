@@ -1,9 +1,9 @@
-package com.codelensai.controller;
+package com.repolensai.controller;
 
-import com.codelensai.dto.review.RepositoryAnalysisRequest;
-import com.codelensai.dto.review.RepositoryAnalysisResponse;
-import com.codelensai.dto.review.RepositoryBranchesResponse;
-import com.codelensai.service.github.GitHubRepositoryService;
+import com.repolensai.dto.review.RepositoryAnalysisRequest;
+import com.repolensai.dto.review.RepositoryAnalysisResponse;
+import com.repolensai.dto.review.RepositoryBranchesResponse;
+import com.repolensai.service.github.GitHubRepositoryService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

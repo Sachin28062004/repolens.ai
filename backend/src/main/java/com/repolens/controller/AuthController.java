@@ -1,9 +1,9 @@
-package com.codelensai.controller;
+package com.repolensai.controller;
 
-import com.codelensai.dto.auth.AuthResponse;
-import com.codelensai.dto.auth.LoginRequest;
-import com.codelensai.dto.auth.RegisterRequest;
-import com.codelensai.service.AuthService;
+import com.repolensai.dto.auth.AuthResponse;
+import com.repolensai.dto.auth.LoginRequest;
+import com.repolensai.dto.auth.RegisterRequest;
+import com.repolensai.service.AuthService;
 import jakarta.validation.Valid;
 import java.security.Principal;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package com.codelensai.controller;
+package com.repolensai.controller;
 
-import com.codelensai.dto.review.UploadAnalysisResponse;
-import com.codelensai.service.upload.UploadAnalysisService;
+import com.repolensai.dto.review.UploadAnalysisResponse;
+import com.repolensai.service.upload.UploadAnalysisService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

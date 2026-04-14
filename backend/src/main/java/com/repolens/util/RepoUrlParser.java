@@ -1,6 +1,6 @@
-package com.codelensai.util;
+package com.repolensai.util;
 
-import com.codelensai.exception.BadRequestException;
+import com.repolensai.exception.BadRequestException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

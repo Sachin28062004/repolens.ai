@@ -1,14 +1,14 @@
-package com.codelensai.service.upload;
+package com.repolensai.service.upload;
 
-import com.codelensai.config.AppProperties;
-import com.codelensai.dto.review.FileFinding;
-import com.codelensai.dto.review.UploadAnalysisResponse;
-import com.codelensai.exception.BadRequestException;
-import com.codelensai.service.groq.GroqService;
-import com.codelensai.service.model.SourceFile;
-import com.codelensai.util.FileFilterUtils;
-import com.codelensai.util.SensitiveContentSanitizer;
-import com.codelensai.util.ZipFileExtractor;
+import com.repolensai.config.AppProperties;
+import com.repolensai.dto.review.FileFinding;
+import com.repolensai.dto.review.UploadAnalysisResponse;
+import com.repolensai.exception.BadRequestException;
+import com.repolensai.service.groq.GroqService;
+import com.repolensai.service.model.SourceFile;
+import com.repolensai.util.FileFilterUtils;
+import com.repolensai.util.SensitiveContentSanitizer;
+import com.repolensai.util.ZipFileExtractor;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;

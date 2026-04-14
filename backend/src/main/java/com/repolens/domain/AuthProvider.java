@@ -1,4 +1,4 @@
-package com.codelensai.domain;
+package com.repolensai.domain;
 
 public enum AuthProvider {
     LOCAL,

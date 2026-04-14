@@ -1,4 +1,4 @@
-# CodeLens AI Backend
+# RepoLens AI Backend
 
 ## Run locally
 

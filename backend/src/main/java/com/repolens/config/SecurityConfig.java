@@ -1,8 +1,8 @@
-package com.codelensai.config;
+package com.repolensai.config;
 
-import com.codelensai.security.GitHubOAuth2SuccessHandler;
-import com.codelensai.security.GitHubOAuth2UserService;
-import com.codelensai.security.JwtAuthenticationFilter;
+import com.repolensai.security.GitHubOAuth2SuccessHandler;
+import com.repolensai.security.GitHubOAuth2UserService;
+import com.repolensai.security.JwtAuthenticationFilter;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Arrays;
 import org.springframework.context.annotation.Bean;

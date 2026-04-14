@@ -1,4 +1,4 @@
-package com.codelensai.domain;
+package com.repolensai.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

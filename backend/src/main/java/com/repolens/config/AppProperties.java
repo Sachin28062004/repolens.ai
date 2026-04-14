@@ -1,4 +1,4 @@
-package com.codelensai.config;
+package com.repolensai.config;
 
 import jakarta.validation.constraints.NotBlank;
 import java.time.Duration;
@@ -43,8 +43,8 @@ public class AppProperties {
     public static class Jwt {
         @NotBlank
         private String secret;
-        private String issuer = "codelens-ai";
-        private String audience = "codelens-ai-api";
+        private String issuer = "repolens-ai";
+        private String audience = "repolens-ai-api";
         private Duration expiration = Duration.ofHours(24);
 
         public String getSecret() {

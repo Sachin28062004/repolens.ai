@@ -1,4 +1,4 @@
-package com.codelensai.config;
+package com.repolensai.config;
 
 import java.time.Duration;
 import org.springframework.context.annotation.Bean;

@@ -1,10 +1,10 @@
-package com.codelensai.security;
+package com.repolensai.security;
 
-import com.codelensai.domain.AuthProvider;
-import com.codelensai.domain.UserAccount;
-import com.codelensai.exception.ExternalServiceException;
-import com.codelensai.repository.UserAccountRepository;
-import com.codelensai.service.github.GitHubApiClient;
+import com.repolensai.domain.AuthProvider;
+import com.repolensai.domain.UserAccount;
+import com.repolensai.exception.ExternalServiceException;
+import com.repolensai.repository.UserAccountRepository;
+import com.repolensai.service.github.GitHubApiClient;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;

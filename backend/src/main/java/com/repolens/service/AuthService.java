@@ -1,15 +1,15 @@
-package com.codelensai.service;
+package com.repolensai.service;
 
-import com.codelensai.domain.AuthProvider;
-import com.codelensai.domain.UserAccount;
-import com.codelensai.dto.auth.AuthResponse;
-import com.codelensai.dto.auth.LoginRequest;
-import com.codelensai.dto.auth.RegisterRequest;
-import com.codelensai.dto.auth.UserResponse;
-import com.codelensai.exception.ConflictException;
-import com.codelensai.exception.UnauthorizedException;
-import com.codelensai.repository.UserAccountRepository;
-import com.codelensai.security.JwtService;
+import com.repolensai.domain.AuthProvider;
+import com.repolensai.domain.UserAccount;
+import com.repolensai.dto.auth.AuthResponse;
+import com.repolensai.dto.auth.LoginRequest;
+import com.repolensai.dto.auth.RegisterRequest;
+import com.repolensai.dto.auth.UserResponse;
+import com.repolensai.exception.ConflictException;
+import com.repolensai.exception.UnauthorizedException;
+import com.repolensai.repository.UserAccountRepository;
+import com.repolensai.security.JwtService;
 import jakarta.transaction.Transactional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

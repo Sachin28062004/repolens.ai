@@ -1,8 +1,8 @@
-package com.codelensai.controller;
+package com.repolensai.controller;
 
-import com.codelensai.dto.review.CodeReviewRequest;
-import com.codelensai.dto.review.CodeReviewResponse;
-import com.codelensai.service.groq.GroqService;
+import com.repolensai.dto.review.CodeReviewRequest;
+import com.repolensai.dto.review.CodeReviewResponse;
+import com.repolensai.service.groq.GroqService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,10 +1,10 @@
-package com.codelensai.service.groq;
+package com.repolensai.service.groq;
 
-import com.codelensai.config.AppProperties;
-import com.codelensai.dto.review.CodeReviewResponse;
-import com.codelensai.dto.review.FileFinding;
-import com.codelensai.exception.ExternalServiceException;
-import com.codelensai.service.model.SourceFile;
+import com.repolensai.config.AppProperties;
+import com.repolensai.dto.review.CodeReviewResponse;
+import com.repolensai.dto.review.FileFinding;
+import com.repolensai.exception.ExternalServiceException;
+import com.repolensai.service.model.SourceFile;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;

@@ -1,6 +1,6 @@
-package com.codelensai.security;
+package com.repolensai.security;
 
-import com.codelensai.repository.UserAccountRepository;
+import com.repolensai.repository.UserAccountRepository;
 import java.util.List;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

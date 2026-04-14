@@ -1,10 +1,10 @@
-package com.codelensai.security;
+package com.repolensai.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.codelensai.config.AppProperties;
-import com.codelensai.domain.UserAccount;
+import com.repolensai.config.AppProperties;
+import com.repolensai.domain.UserAccount;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.Base64;

@@ -1,12 +1,12 @@
-package com.codelensai.service.github;
+package com.repolensai.service.github;
 
-import com.codelensai.exception.BadRequestException;
-import com.codelensai.exception.ExternalServiceException;
-import com.codelensai.service.model.SourceFile;
-import com.codelensai.util.FileFilterUtils;
-import com.codelensai.util.RepoUrlParser;
-import com.codelensai.util.RepoUrlParser.GitHubPullRequestRef;
-import com.codelensai.util.RepoUrlParser.GitHubRepoRef;
+import com.repolensai.exception.BadRequestException;
+import com.repolensai.exception.ExternalServiceException;
+import com.repolensai.service.model.SourceFile;
+import com.repolensai.util.FileFilterUtils;
+import com.repolensai.util.RepoUrlParser;
+import com.repolensai.util.RepoUrlParser.GitHubPullRequestRef;
+import com.repolensai.util.RepoUrlParser.GitHubRepoRef;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;

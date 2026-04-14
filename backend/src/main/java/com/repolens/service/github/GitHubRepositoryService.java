@@ -1,15 +1,15 @@
-package com.codelensai.service.github;
+package com.repolensai.service.github;
 
-import com.codelensai.config.AppProperties;
-import com.codelensai.dto.review.RepositoryAnalysisRequest;
-import com.codelensai.dto.review.RepositoryAnalysisResponse;
-import com.codelensai.dto.review.RepositoryBranchesResponse;
-import com.codelensai.dto.review.FileFinding;
-import com.codelensai.exception.BadRequestException;
-import com.codelensai.service.groq.GroqService;
-import com.codelensai.service.model.SourceFile;
-import com.codelensai.util.RepoUrlParser;
-import com.codelensai.util.RepoUrlParser.GitHubPullRequestRef;
+import com.repolensai.config.AppProperties;
+import com.repolensai.dto.review.RepositoryAnalysisRequest;
+import com.repolensai.dto.review.RepositoryAnalysisResponse;
+import com.repolensai.dto.review.RepositoryBranchesResponse;
+import com.repolensai.dto.review.FileFinding;
+import com.repolensai.exception.BadRequestException;
+import com.repolensai.service.groq.GroqService;
+import com.repolensai.service.model.SourceFile;
+import com.repolensai.util.RepoUrlParser;
+import com.repolensai.util.RepoUrlParser.GitHubPullRequestRef;
 import java.util.List;
 import org.springframework.stereotype.Service;
 

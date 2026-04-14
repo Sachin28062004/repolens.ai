@@ -1,4 +1,4 @@
-package com.codelensai.dto.review;
+package com.repolensai.dto.review;
 
 import jakarta.validation.constraints.NotBlank;
 

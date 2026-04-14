@@ -1,10 +1,10 @@
-package com.codelensai.security;
+package com.repolensai.security;
 
-import com.codelensai.config.AppProperties;
-import com.codelensai.domain.AuthProvider;
-import com.codelensai.domain.UserAccount;
-import com.codelensai.exception.ExternalServiceException;
-import com.codelensai.repository.UserAccountRepository;
+import com.repolensai.config.AppProperties;
+import com.repolensai.domain.AuthProvider;
+import com.repolensai.domain.UserAccount;
+import com.repolensai.exception.ExternalServiceException;
+import com.repolensai.repository.UserAccountRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

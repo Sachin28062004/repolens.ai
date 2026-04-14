@@ -1,6 +1,6 @@
-package com.codelensai.repository;
+package com.repolensai.repository;
 
-import com.codelensai.domain.UserAccount;
+import com.repolensai.domain.UserAccount;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

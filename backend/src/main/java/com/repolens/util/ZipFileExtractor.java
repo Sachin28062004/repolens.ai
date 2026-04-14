@@ -1,6 +1,6 @@
-package com.codelensai.util;
+package com.repolensai.util;
 
-import com.codelensai.exception.BadRequestException;
+import com.repolensai.exception.BadRequestException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
