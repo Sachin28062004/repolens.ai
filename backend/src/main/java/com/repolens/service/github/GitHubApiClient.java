@@ -7,7 +7,7 @@ import com.repolensai.util.FileFilterUtils;
 import com.repolensai.util.RepoUrlParser;
 import com.repolensai.util.RepoUrlParser.GitHubPullRequestRef;
 import com.repolensai.util.RepoUrlParser.GitHubRepoRef;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;

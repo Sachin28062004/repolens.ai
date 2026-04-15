@@ -1,19 +1,19 @@
 spring:
   application:
-    name: repolens-ai-backend
+    name: repolens-backend
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/repolensai}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/repolens}
     username: ${SPRING_DATASOURCE_USERNAME:repolens}
     password: ${SPRING_DATASOURCE_PASSWORD:repolens}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     open-in-view: false
     properties:
       hibernate:
         format_sql: true
-    show-sql: false
+    show-sql: true
   flyway:
     enabled: true
   security:
@@ -21,8 +21,8 @@ spring:
       client:
         registration:
           github:
-            client-id: ${GITHUB_CLIENT_ID:}
-            client-secret: ${GITHUB_CLIENT_SECRET:}
+            client-id: ${GITHUB_CLIENT_ID:github-client-id-placeholder}
+            client-secret: ${GITHUB_CLIENT_SECRET:github-client-secret-placeholder}
             scope:
               - read:user
               - user:email
@@ -45,8 +45,8 @@ logging:
 app:
   jwt:
     secret: ${JWT_SECRET:change-me-to-a-very-long-random-secret-change-me}
-    issuer: ${JWT_ISSUER:repolens-ai}
-    audience: ${JWT_AUDIENCE:repolens-ai-api}
+    issuer: ${JWT_ISSUER:repolens}
+    audience: ${JWT_AUDIENCE:repolens-api}
     expiration: ${JWT_EXPIRATION:PT24H}
   groq:
     api-key: ${GROQ_API_KEY:}

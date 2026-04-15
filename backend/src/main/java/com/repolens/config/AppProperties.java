@@ -43,8 +43,8 @@ public class AppProperties {
     public static class Jwt {
         @NotBlank
         private String secret;
-        private String issuer = "repolens-ai";
-        private String audience = "repolens-ai-api";
+        private String issuer = "repolens";
+        private String audience = "repolens-api";
         private Duration expiration = Duration.ofHours(24);
 
         public String getSecret() {

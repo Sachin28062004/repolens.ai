@@ -1,15 +1,15 @@
 services:
   db:
-    image: postgres:16-alpine
-    container_name: repolensai-postgres
+    image: postgres:13
+    container_name: repolens-postgres
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-repolensai}
+      POSTGRES_DB: ${POSTGRES_DB:-repolens}
       POSTGRES_USER: ${POSTGRES_USER:-repolens}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-repolens}
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-repolens} -d ${POSTGRES_DB:-repolensai}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-repolens} -d ${POSTGRES_DB:-repolens}"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -20,18 +20,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: repolensai-backend
+    container_name: repolens-backend
     depends_on:
       db:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB:-repolensai}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB:-repolens}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-repolens}
-      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-reopolens}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-repolens}
       JWT_SECRET: ${JWT_SECRET:-change-me-to-a-very-long-random-secret-change-me}
       GROQ_API_KEY: ${GROQ_API_KEY:-}
-      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID:-}
-      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET:-}
       GITHUB_API_TOKEN: ${GITHUB_API_TOKEN:-}
       OAUTH2_SUCCESS_REDIRECT_URI: ${OAUTH2_SUCCESS_REDIRECT_URI:-http://localhost:3000/oauth2/success}
       FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:-http://localhost:3000}

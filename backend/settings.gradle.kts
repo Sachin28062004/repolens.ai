@@ -1,1 +1,1 @@
-rootProject.name = "repolens-ai-backend"
+rootProject.name = "repolens-backend"

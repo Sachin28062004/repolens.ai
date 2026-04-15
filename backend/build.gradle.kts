@@ -4,7 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com.repolensai"
+group = "com.repolens"
 version = "0.1.0"
 
 java {
@@ -25,6 +25,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.flywaydb:flyway-core")
+    implementation("org.flywaydb:flyway-database-postgresql")
 
     implementation("com.auth0:java-jwt:4.5.0")
     runtimeOnly("org.postgresql:postgresql:42.7.10")
