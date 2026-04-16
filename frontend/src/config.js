@@ -17,8 +17,8 @@ export const LANGUAGE_OPTIONS = [
 ];
 
 export const PRODUCT_FEATURES = [
-  "Password and GitHub sign-in",
-  "Repository branch and pull request analysis",
-  "Single-file AI code review",
-  "ZIP and source-file upload analysis",
+  "Password and GitHub access",
+  "Repository and pull request analysis",
+  "Single-file review",
+  "ZIP and source upload analysis",
 ];

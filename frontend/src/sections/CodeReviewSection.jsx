@@ -3,7 +3,7 @@ import { LANGUAGE_OPTIONS } from "../config";
 import { runProtectedAction } from "../middleware/authGuard";
 import { ReviewResult } from "../components/ReviewResult";
 
-const starterSnippet = `public class Demo {
+const starterSnippet = `public class Sample {
     public int divide(int value) {
         return 100 / value;
     }
@@ -16,7 +16,7 @@ export function CodeReviewSection({
 }) {
   const [form, setForm] = useState({
     language: "java",
-    fileName: "Demo.java",
+    fileName: "Sample.java",
     code: starterSnippet,
   });
   const [result, setResult] = useState(null);
@@ -50,7 +50,7 @@ export function CodeReviewSection({
             },
           });
           setResult(payload);
-          setStatus("Code review finished. Scroll down to inspect the suggested fixes.");
+          setStatus("Code review completed.");
         } catch (requestError) {
           setError(requestError.message);
         } finally {
@@ -64,10 +64,8 @@ export function CodeReviewSection({
     <section className="panel">
       <div className="section-heading">
         <span className="eyebrow">Snippet Review</span>
-        <h2>Review a single file instantly</h2>
-        <p>
-          Paste code, choose a language, and get structured bugs plus an improved version.
-        </p>
+        <h2>Review a single file</h2>
+        <p>Paste code, choose a language, and get structured feedback.</p>
       </div>
 
       <form className="stack-lg" onSubmit={reviewCode}>
@@ -90,7 +88,7 @@ export function CodeReviewSection({
             <span>File name</span>
             <input
               type="text"
-              placeholder="Example.java"
+              placeholder="File name"
               value={form.fileName}
               onChange={(event) => updateField("fileName", event.target.value)}
             />
@@ -108,7 +106,7 @@ export function CodeReviewSection({
         </div>
 
         <button type="submit" className="primary-button" disabled={loading}>
-          {loading ? "Reviewing code..." : "Review snippet"}
+          {loading ? "Reviewing..." : "Review snippet"}
         </button>
       </form>
 

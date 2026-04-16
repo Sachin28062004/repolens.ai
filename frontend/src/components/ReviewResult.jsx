@@ -5,7 +5,7 @@ export function ReviewResult({ result }) {
 
   return (
     <div className="result-panel">
-      <h3>Review Result</h3>
+      <h3>Review summary</h3>
       <p className="muted-text">{result.explanation}</p>
 
       <div className="stack-md">
@@ -23,22 +23,22 @@ export function ReviewResult({ result }) {
               </div>
               <div className="finding-copy">
                 <p>
-                  <strong>Why:</strong> {bug.explanation}
+                  <strong>Rationale:</strong> {bug.explanation}
                 </p>
                 <p>
-                  <strong>Suggested fix:</strong> {bug.fix}
+                  <strong>Fix:</strong> {bug.fix}
                 </p>
               </div>
             </article>
           ))
         ) : (
-          <div className="empty-result">No bugs were reported for this snippet.</div>
+          <div className="empty-result">No issues found in this snippet.</div>
         )}
       </div>
 
       <div className="code-block-wrap">
         <div className="code-block-header">
-          <span>Improved code</span>
+          <span>Updated code</span>
         </div>
         <pre className="code-block">
           <code>{result.fixedCode}</code>

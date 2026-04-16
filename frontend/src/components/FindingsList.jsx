@@ -29,10 +29,10 @@ export function FindingsList({ findings, title }) {
 
             <div className="finding-copy">
               <p>
-                <strong>Why:</strong> {finding.explanation}
+                <strong>Rationale:</strong> {finding.explanation}
               </p>
               <p>
-                <strong>Suggested fix:</strong> {finding.fix}
+                <strong>Fix:</strong> {finding.fix}
               </p>
             </div>
           </article>

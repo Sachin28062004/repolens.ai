@@ -11,16 +11,16 @@ export function ShellHeader({ session, onLogout }) {
   return (
     <header className="shell-header">
       <div>
-        <p className="eyebrow">RepoLens AI Workspace</p>
-        <h1>Frontend for your code-review backend</h1>
+        <p className="eyebrow">RepoLens</p>
+        <h1>Code review console</h1>
       </div>
 
       <div className="header-actions">
         <div className="user-chip">
           <div className="user-avatar">{initialsFromName(session.user?.name)}</div>
           <div>
-            <strong>{session.user?.name || "RepoLens User"}</strong>
-            <span>{session.user?.email || "Signed in"}</span>
+            <strong>{session.user?.name || "Account"}</strong>
+            <span>{session.user?.email || "Active session"}</span>
           </div>
         </div>
 

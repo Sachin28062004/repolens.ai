@@ -47,9 +47,7 @@ export function RepositoryAnalysisSection({
             ...current,
             branch: current.branch || payload.defaultBranch || "",
           }));
-          setStatus(
-            `Loaded ${payload.branches?.length || 0} branches from ${payload.owner}/${payload.repository}.`,
-          );
+          setStatus(`Loaded ${payload.branches?.length || 0} branches.`);
         } catch (requestError) {
           setError(requestError.message);
         } finally {
@@ -79,9 +77,7 @@ export function RepositoryAnalysisSection({
             },
           });
           setResult(payload);
-          setStatus(
-            `Analysis completed for ${payload.owner}/${payload.repository} using ${payload.sourceType}.`,
-          );
+          setStatus("Repository analysis completed.");
         } catch (requestError) {
           setError(requestError.message);
         } finally {
@@ -94,11 +90,9 @@ export function RepositoryAnalysisSection({
   return (
     <section className="panel panel-wide">
       <div className="section-heading">
-        <span className="eyebrow">GitHub Analysis</span>
+        <span className="eyebrow">Repository Analysis</span>
         <h2>Inspect a repository branch or pull request</h2>
-        <p>
-          Load branches first, then analyze a branch or point directly to a pull request URL.
-        </p>
+        <p>Load branches, then analyze a branch or a pull request URL.</p>
       </div>
 
       <form className="stack-lg" onSubmit={analyzeRepository}>
@@ -158,7 +152,7 @@ export function RepositoryAnalysisSection({
             onClick={fetchBranches}
             disabled={loadingBranches || !form.repoUrl}
           >
-            {loadingBranches ? "Loading branches..." : "Load branches"}
+            {loadingBranches ? "Loading..." : "Load branches"}
           </button>
 
           <button
@@ -166,7 +160,7 @@ export function RepositoryAnalysisSection({
             className="primary-button"
             disabled={loadingAnalysis || !form.repoUrl}
           >
-            {loadingAnalysis ? "Analyzing repository..." : "Analyze repository"}
+            {loadingAnalysis ? "Analyzing..." : "Analyze repository"}
           </button>
         </div>
       </form>

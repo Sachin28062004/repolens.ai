@@ -39,7 +39,7 @@ export function UploadAnalysisSection({
             body: formData,
           });
           setResult(payload);
-          setStatus(`Upload analysis completed for ${payload.analyzedFiles} file(s).`);
+          setStatus("Upload analysis completed.");
         } catch (requestError) {
           setError(requestError.message);
         } finally {
@@ -54,9 +54,7 @@ export function UploadAnalysisSection({
       <div className="section-heading">
         <span className="eyebrow">Upload Review</span>
         <h2>Analyze source files or a ZIP archive</h2>
-        <p>
-          Great for quick demos, offline samples, or code you do not want to pull from GitHub.
-        </p>
+        <p>Use source files or a ZIP archive when repository access is not required.</p>
       </div>
 
       <form className="stack-lg" onSubmit={analyzeUpload}>
@@ -102,7 +100,7 @@ export function UploadAnalysisSection({
           className="primary-button"
           disabled={loading || (!archive && files.length === 0)}
         >
-          {loading ? "Analyzing upload..." : "Analyze upload"}
+          {loading ? "Analyzing..." : "Analyze upload"}
         </button>
       </form>
 

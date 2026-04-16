@@ -46,11 +46,9 @@ export function AuthPanel({
   return (
     <section className="panel auth-panel">
       <div className="section-heading">
-        <span className="eyebrow">Secure Access</span>
-        <h2>Sign in to start reviewing code</h2>
-        <p>
-          Use your RepoLens account or jump in with GitHub OAuth.
-        </p>
+        <span className="eyebrow">Access</span>
+        <h2>Sign in to continue</h2>
+        <p>Use your account or continue with GitHub.</p>
       </div>
 
       <div className="segmented-control">
@@ -59,14 +57,14 @@ export function AuthPanel({
           className={mode === "login" ? "active" : ""}
           onClick={() => setMode("login")}
         >
-          Login
+          Sign in
         </button>
         <button
           type="button"
           className={mode === "register" ? "active" : ""}
           onClick={() => setMode("register")}
         >
-          Register
+          Create account
         </button>
       </div>
 
@@ -76,7 +74,7 @@ export function AuthPanel({
             <span>Name</span>
             <input
               type="text"
-              placeholder="Akhil Kumar"
+              placeholder="Full name"
               value={currentForm.name}
               onChange={(event) => updateField("name", event.target.value)}
               required
@@ -88,7 +86,7 @@ export function AuthPanel({
           <span>Email</span>
           <input
             type="email"
-            placeholder="you@example.com"
+            placeholder="name@company.com"
             value={currentForm.email}
             onChange={(event) => updateField("email", event.target.value)}
             required
@@ -99,7 +97,7 @@ export function AuthPanel({
           <span>Password</span>
           <input
             type="password"
-            placeholder={mode === "register" ? "Minimum 8 characters" : "Enter your password"}
+            placeholder={mode === "register" ? "At least 8 characters" : "Password"}
             value={currentForm.password}
             onChange={(event) => updateField("password", event.target.value)}
             minLength={mode === "register" ? 8 : 1}
@@ -113,7 +111,7 @@ export function AuthPanel({
       </form>
 
       <div className="divider">
-        <span>or continue with</span>
+        <span>or</span>
       </div>
 
       <button
@@ -122,7 +120,7 @@ export function AuthPanel({
         onClick={onGitHubLogin}
         disabled={busy}
       >
-        GitHub OAuth
+        Continue with GitHub
       </button>
     </section>
   );
