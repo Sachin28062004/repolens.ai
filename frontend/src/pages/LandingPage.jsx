@@ -15,10 +15,6 @@ export function LandingPage() {
     signIn(payload);
   }
 
-  function handleGitHubLogin() {
-    window.location.href = `${import.meta.env.VITE_API_BASE_URL || "http://localhost:8080"}/oauth2/authorization/github`;
-  }
-
   return (
     <PublicLayout>
       <div className="page-fade mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-8 sm:px-6 lg:px-8">
@@ -55,7 +51,7 @@ export function LandingPage() {
           </section>
 
           <div className="lg:pl-6">
-            <AuthCard onLogin={handleLogin} onRegister={handleRegister} onGitHubLogin={handleGitHubLogin} />
+            <AuthCard onLogin={handleLogin} onRegister={handleRegister} />
           </div>
         </div>
       </div>

@@ -5,8 +5,6 @@
 1. Create `backend/.env` from `.env.example` and fill in:
    - `JWT_SECRET`
    - `GROQ_API_KEY`
-   - `GITHUB_CLIENT_ID`
-   - `GITHUB_CLIENT_SECRET`
    - Optional `GITHUB_API_TOKEN`
 2. Start PostgreSQL:
    - `docker compose -f backend/docker-compose.yml up -d db`
@@ -32,7 +30,3 @@
 - `POST /api/reviews/code`
 - `POST /api/uploads`
 
-## GitHub OAuth
-
-- Start login with Spring Security at:
-  - `/oauth2/authorization/github`

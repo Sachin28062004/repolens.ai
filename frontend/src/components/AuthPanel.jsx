@@ -16,7 +16,6 @@ export function AuthPanel({
   busy,
   onLogin,
   onRegister,
-  onGitHubLogin,
 }) {
   const [mode, setMode] = useState("login");
   const [forms, setForms] = useState(initialForms);
@@ -48,7 +47,7 @@ export function AuthPanel({
       <div className="section-heading">
         <span className="eyebrow">Access</span>
         <h2>Sign in to continue</h2>
-        <p>Use your account or continue with GitHub.</p>
+        <p>Use your RepoLens account to continue.</p>
       </div>
 
       <div className="segmented-control">
@@ -109,19 +108,6 @@ export function AuthPanel({
           {busy ? "Please wait..." : mode === "login" ? "Login" : "Create account"}
         </button>
       </form>
-
-      <div className="divider">
-        <span>or</span>
-      </div>
-
-      <button
-        type="button"
-        className="ghost-button"
-        onClick={onGitHubLogin}
-        disabled={busy}
-      >
-        Continue with GitHub
-      </button>
     </section>
   );
 }

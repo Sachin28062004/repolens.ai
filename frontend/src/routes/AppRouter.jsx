@@ -7,7 +7,6 @@ import { DashboardPage } from "../pages/DashboardPage";
 import { CodeReviewPage } from "../pages/CodeReviewPage";
 import { GitHubAnalysisPage } from "../pages/GitHubAnalysisPage";
 import { FileUploadPage } from "../pages/FileUploadPage";
-import { OAuthCallbackPage } from "../pages/OAuthCallbackPage";
 
 export function AppRouter() {
   const { isAuthenticated } = useApp();
@@ -15,7 +14,6 @@ export function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/oauth2/success" element={<OAuthCallbackPage />} />
         <Route path="/" element={isAuthenticated ? <Navigate to="/app/dashboard" replace /> : <LandingPage />} />
         <Route path="/login" element={isAuthenticated ? <Navigate to="/app/dashboard" replace /> : <LandingPage />} />
         <Route

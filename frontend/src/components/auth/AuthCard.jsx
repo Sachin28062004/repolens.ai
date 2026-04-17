@@ -14,7 +14,7 @@ const initialForms = {
   },
 };
 
-export function AuthCard({ onLogin, onRegister, onGitHubLogin }) {
+export function AuthCard({ onLogin, onRegister }) {
   const [mode, setMode] = useState("login");
   const [forms, setForms] = useState(initialForms);
   const [busy, setBusy] = useState(false);
@@ -56,7 +56,12 @@ export function AuthCard({ onLogin, onRegister, onGitHubLogin }) {
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold tracking-[0.22em] text-blue-600 uppercase">Access</p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Sign in</h2>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
+            {mode === "login" ? "Sign in to RepoLens" : "Create your RepoLens account"}
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-slate-500">
+            Use your email and password to access AI reviews, repository scans, and upload analysis.
+          </p>
         </div>
         <div className="inline-flex rounded-2xl bg-slate-100 p-1 text-sm font-medium">
           <button
@@ -132,20 +137,6 @@ export function AuthCard({ onLogin, onRegister, onGitHubLogin }) {
         </button>
       </form>
 
-      <div className="my-5 flex items-center gap-3">
-        <div className="h-px flex-1 bg-slate-200" />
-        <span className="text-xs font-medium uppercase tracking-[0.22em] text-slate-400">or</span>
-        <div className="h-px flex-1 bg-slate-200" />
-      </div>
-
-      <button
-        type="button"
-        className="inline-flex w-full items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-        onClick={onGitHubLogin}
-        disabled={busy}
-      >
-        Continue with GitHub
-      </button>
     </section>
   );
 }

@@ -16,19 +16,6 @@ spring:
     show-sql: true
   flyway:
     enabled: true
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            client-id: ${GITHUB_CLIENT_ID:github-client-id-placeholder}
-            client-secret: ${GITHUB_CLIENT_SECRET:github-client-secret-placeholder}
-            scope:
-              - read:user
-              - user:email
-        provider:
-          github:
-            user-name-attribute: id
   servlet:
     multipart:
       max-file-size: 15MB
@@ -51,7 +38,7 @@ app:
   groq:
     api-key: ${GROQ_API_KEY:}
     base-url: ${GROQ_BASE_URL:https://api.groq.com/openai/v1}
-    model: ${GROQ_MODEL:moonshotai/kimi-k2-instruct-0905}
+    model: ${GROQ_MODEL:openai/gpt-oss-120b}
     timeout: ${GROQ_TIMEOUT:PT90S}
   github:
     api-base-url: ${GITHUB_API_BASE_URL:https://api.github.com}
@@ -60,10 +47,6 @@ app:
   upload:
     max-files: ${UPLOAD_MAX_FILES:10}
     max-zip-bytes: ${UPLOAD_MAX_ZIP_BYTES:15728640}
-  security:
-    oauth2-success-redirect-uri: ${OAUTH2_SUCCESS_REDIRECT_URI:http://localhost:3000/oauth2/success}
-    permitted-origins:
-      - ${FRONTEND_ORIGIN:http://localhost:3000}
   cors:
     allowed-origins:
       - ${FRONTEND_ORIGIN:http://localhost:3000}

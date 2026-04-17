@@ -31,7 +31,6 @@ services:
       JWT_SECRET: ${JWT_SECRET:-change-me-to-a-very-long-random-secret-change-me}
       GROQ_API_KEY: ${GROQ_API_KEY:-}
       GITHUB_API_TOKEN: ${GITHUB_API_TOKEN:-}
-      OAUTH2_SUCCESS_REDIRECT_URI: ${OAUTH2_SUCCESS_REDIRECT_URI:-http://localhost:3000/oauth2/success}
       FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:-http://localhost:3000}
     ports:
       - "8080:8080"

@@ -13,7 +13,6 @@ public class AppProperties {
     private final Groq groq = new Groq();
     private final GitHub github = new GitHub();
     private final Upload upload = new Upload();
-    private final Security security = new Security();
     private final Cors cors = new Cors();
 
     public Jwt getJwt() {
@@ -30,10 +29,6 @@ public class AppProperties {
 
     public Upload getUpload() {
         return upload;
-    }
-
-    public Security getSecurity() {
-        return security;
     }
 
     public Cors getCors() {
@@ -83,7 +78,7 @@ public class AppProperties {
     public static class Groq {
         private String apiKey;
         private String baseUrl = "https://api.groq.com/openai/v1";
-        private String model = "moonshotai/kimi-k2-instruct-0905";
+        private String model = "openai/gpt-oss-120b";
         private Duration timeout = Duration.ofSeconds(90);
 
         public String getApiKey() {
@@ -167,27 +162,6 @@ public class AppProperties {
 
         public void setMaxZipBytes(long maxZipBytes) {
             this.maxZipBytes = maxZipBytes;
-        }
-    }
-
-    public static class Security {
-        private String oauth2SuccessRedirectUri = "http://localhost:3000/oauth2/success";
-        private String[] permittedOrigins = new String[] {"http://localhost:3000"};
-
-        public String getOauth2SuccessRedirectUri() {
-            return oauth2SuccessRedirectUri;
-        }
-
-        public void setOauth2SuccessRedirectUri(String oauth2SuccessRedirectUri) {
-            this.oauth2SuccessRedirectUri = oauth2SuccessRedirectUri;
-        }
-
-        public String[] getPermittedOrigins() {
-            return permittedOrigins;
-        }
-
-        public void setPermittedOrigins(String[] permittedOrigins) {
-            this.permittedOrigins = permittedOrigins;
         }
     }
 
